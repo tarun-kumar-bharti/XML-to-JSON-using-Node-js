@@ -1,11 +1,11 @@
 const express 		= require('express');
 const compression 	= require('compression');
-const fs 			= require('fs');
+const fs 		= require('fs');
 const helmet 		= require('helmet');
 const bodyParser 	= require('body-parser'); 		 
-const cors 			= require('cors');	
+const cors 		= require('cors');	
 const xmlparser 	= require('express-xml-bodyparser');
-const app 			= express();
+const app 		= express();
 
 
 app.use(compression());
@@ -36,9 +36,9 @@ app.use('/api/inrecon', authRoute);
 var options = {   
      
 	key: fs.readFileSync('/etc/apache2/cirtificate/bizdata.key'),
-    cert: fs.readFileSync('/etc/apache2/cirtificate/594e68a0bdbe74ba.crt'),
-    ca: fs.readFileSync('/etc/apache2/cirtificate/gd_bundle-g2-g1.crt'),
-    requestCert: false 
+    	cert: fs.readFileSync('/etc/apache2/cirtificate/594e68a0bdbe74ba.crt'),
+    	ca: fs.readFileSync('/etc/apache2/cirtificate/gd_bundle-g2-g1.crt'),
+   	requestCert: false 
 	 
 };
 
